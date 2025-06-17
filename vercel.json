@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "outputDirectory": "static",
+  "ignoreCommand": "echo Backend ignored for frontend static deploy"
+}
