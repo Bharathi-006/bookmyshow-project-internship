@@ -82,7 +82,30 @@
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const seatCheckboxes = document.querySelectorAll("input[type='checkbox'][name='seats']");
 
+    seatCheckboxes.forEach(checkbox => {
+      const seatDiv = checkbox.closest(".seat");
+
+      // Initial check
+      if (checkbox.checked) {
+        seatDiv.classList.add("selected");
+      }
+
+      checkbox.addEventListener("change", function () {
+        if (checkbox.checked) {
+          seatDiv.classList.add("selected");
+        } else {
+          seatDiv.classList.remove("selected");
+        }
+      });
+    });
+  });
+</script>
+
+      
 <style>
   .seat {
     width: 30px;
